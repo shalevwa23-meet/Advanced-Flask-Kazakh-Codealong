@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kazakh Guide</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">h2{font-family: 'Garamond'}</style>
+</head>
+
+<body style="background-color: #00D5F2">
+	<center style="margin: 0px; padding: 0px">
+
+		<img src = "https://us.123rf.com/450wm/tomozina/tomozina1705/tomozina170500105/78364548-nature-of-east-kazakhstan-panorama-spring-green-steppe-and-mountains.jpg" height="150" style="width: 100%">
+		<h1 style="font-family: 'Garamond' ">Welcome, all! Let's see what awaits you in Kazakhstan!</h1>
+		<hr style="color: #FFEC2D; background-color: #FFEC2D; height: 2px; width: 60%;">
+
+<!-- __________ -->
+	{% for t in tourist_dict %}
+		<a href = "{{url_for('personal', name = t)}}"><h2>{{t}}</h2></a>
+		{% if tourist_dict[t] == "Male" %}
+			<img src="https://e-history.kz/storage/tmp/resize/news/1200_0_19cf23703e5e2b664b07bef95d06b9d9.jpg" width="200px" height="200px">
+			<img src="https://central-asia.guide/wp-content/uploads/2021/07/Kazakh_eagle_hunter-1024x683.jpg" width="200px" height="200px">
+		{% endif %}
+		{% if tourist_dict[t] == "Female" %}
+			<img src="https://e-history.kz/storage/tmp/resize/seo_materials/1200_0_881c201543cdd5099c8c1984add5ea58.jpg" width="200px" height="200px">
+			<img src="https://kzvesti.kz/wp-content/uploads/2021/11/6770710-e1636137050665.jpg" width="200px" height="200px">
+		{% endif %}
+		<img src="https://nationalfoods.org/wp-content/uploads/2018/03/National-Dish-of-Kazakhstan-Beshbarmak-served-in-red-dish.jpg" width="200px" height="200px">
+		<hr width="50%">
+	{% endfor %}
+<!-- __________ -->
+
+	</center>
+</body>
+</html>
+
+
+<!-- man hat -->
+<!-- <img src="https://e-history.kz/storage/tmp/resize/news/1200_0_19cf23703e5e2b664b07bef95d06b9d9.jpg" width="200px" height="200px"> -->
+
+<!-- man pic -->
+<!-- <img src="https://central-asia.guide/wp-content/uploads/2021/07/Kazakh_eagle_hunter-1024x683.jpg" width="200px" height="200px"> -->
+
+
+<!-- woman hat -->
+<!-- <img src="https://e-history.kz/storage/tmp/resize/seo_materials/1200_0_881c201543cdd5099c8c1984add5ea58.jpg" width="200px" height="200px"> -->
+
+
+<!-- woman pic -->
+<!-- <img src="https://kzvesti.kz/wp-content/uploads/2021/11/6770710-e1636137050665.jpg" width="200px" height="200px"> -->
+
+<!-- horse meat -->
+<!-- <img src="https://nationalfoods.org/wp-content/uploads/2018/03/National-Dish-of-Kazakhstan-Beshbarmak-served-in-red-dish.jpg" width="200px" height="200px"> -->
